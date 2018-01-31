@@ -1,5 +1,6 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const Task = require('./task.jsx')
 const thingy = [
   { done:false, title:"Do stuff" },
   { done:true, title:"Do moar stuff"},
@@ -17,9 +18,10 @@ class TaskList extends React.Component {
         <ul> 
           <li> "yay" {thingy[0].title}</li>
             { 
-              thingy.map((task, index) => { 
-               return <li key={index}>  {task.title} </li>
-              })
+              thingy.map((task, index) =>  
+               <Task key={index} title={task.title}/>  
+               
+              )
             }
         </ul>
       </div>
