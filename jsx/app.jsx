@@ -2,10 +2,10 @@ require('../css/main.css')
 
 const React = require('react')
 const ReactDOM = require ('react-dom')
-const Content = require('./content.jsx')
+const TaskList = require('./task-list.jsx')
 
 
 ReactDOM.render(
-  <Content />,
+  <TaskList />,
   document.getElementById('content')
 )
