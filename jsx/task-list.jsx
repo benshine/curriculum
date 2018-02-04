@@ -15,8 +15,7 @@ class TaskList extends React.Component {
     return (
       <div className="well">
         <h1>TaskList</h1>
-        <ul> 
-          <li> "yay" {thingy[0].title}</li>
+        <ul>
             { 
               thingy.map((task, index) =>  
                <Task key={index} title={task.title}/>  

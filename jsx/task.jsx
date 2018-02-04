@@ -8,16 +8,15 @@ class Task extends React.Component {
   }
   render() {
     return (
-      
-          <li> "yay" {this.props.title} </li>
-           /* { 
-              thingy.map((task, index) =>  
-               <li key={index}>  
-               <input type="checkbox" { (task.done) ? "checked" :"nope"}  >
-               </input> 
-               </li>
-              )*/
+        <div>
+          <li>
+          <input type="checkbox"  checked={this.props.done} >
+          </input>
+            {this.props.title}
+    </li>
 
+
+</div>
            
     )
   }
