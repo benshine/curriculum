@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
+import PropTypes from 'prop-types'
 
-import logo from './logo.svg';
 import './App.css';
 
 const todo = (state, action) => {
@@ -118,7 +118,7 @@ class FilterLink extends Component {
   }
 }
 FilterLink.contextTypes = {
-  store: React.PropTypes
+  store: PropTypes.store
 };
 
 const Footer = () => (
@@ -195,7 +195,7 @@ const AddTodo = (props, { store }) => {
   );
 };
 AddTodo.contextTypes = {
-  store: React.PropTypes
+  store: PropTypes
 };
 
 const getVisibleTodos = (
@@ -213,6 +213,8 @@ const getVisibleTodos = (
       return todos.filter(
         t => !t.completed
       );
+    default:
+      return [];
   }
 }
 
@@ -229,7 +231,6 @@ class VisibleTodoList extends Component {
   }
 
   render() {
-    const props = this.props;
     const { store } = this.context;
     const state = store.getState();
 
@@ -252,7 +253,7 @@ class VisibleTodoList extends Component {
   }
 }
 VisibleTodoList.contextTypes = {
-  store: React.PropTypes
+  store: PropTypes
 };
 
 const TodoApp = () => (
