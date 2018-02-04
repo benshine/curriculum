@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
+
+// ReactDOM.render(
+//   <Provider store={createStore(todoApp)}>
+//     <TodoApp />
+//   </Provider>,
+//   document.getElementById('root')
+// );
 
 class App extends Component {
   render() {
