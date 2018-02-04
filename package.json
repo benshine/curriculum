@@ -15,7 +15,9 @@
       "react"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "redux": "^3.7.2"
+  },
   "devDependencies": {
     "babel-core": "6.13.2",
     "babel-loader": "6.4.1",
